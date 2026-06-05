@@ -25,7 +25,7 @@ Ran `ipconfig /all` to view the current network adapter settings.
 **Result:** Everything looked normal. The machine had a valid IP address, gateway, and DNS server all pointing to `192.168.1.1`.
 
 > Screenshot: `1-ipconfig-normal.PNG`
-> ![](scenario-1/screenshots/1-ipconfig-normal.PNG)
+> ![](../scenario-1/screenshots/1-ipconfig-normal.PNG)
 
 ---
 
@@ -39,7 +39,7 @@ Ran two ping tests to confirm internet access was working before breaking anythi
 **Result:** Both worked. DNS was resolving correctly.
 
 > Screenshot: `2-ping-normal.PNG`
-> ![](scenario-1/screenshots/2-ping-normal.PNG)
+> ![](../scenario-1/screenshots/2-ping-normal.PNG)
 
 ---
 
@@ -50,7 +50,7 @@ Ran `nslookup google.com` to verify DNS was resolving domain names.
 **Result:** Returned multiple valid IP addresses for google.com using DNS server `192.168.1.1`.
 
 > Screenshot: `3-nslookup-normal.PNG`
-> ![](scenario-1/screenshots/3-nslookup-normal.PNG)
+> ![](../scenario-1/screenshots/3-nslookup-normal.PNG)
 
 ---
 
@@ -65,7 +65,7 @@ Then ran:
 **Finding:** The machine can reach the internet by IP, but cannot resolve domain names. This points directly to a DNS problem.
 
 > Screenshot: `4-ping-dns-broken.PNG`
-> ![](scenario-1/screenshots/4-ping-dns-broken.PNG)
+> ![](../scenario-1/screenshots/4-ping-dns-broken.PNG)
 
 ---
 
@@ -76,7 +76,7 @@ Ran `nslookup google.com` while DNS was broken.
 **Result:** DNS request timed out repeatedly. The server address showed `1.2.3.4` (the fake DNS), and all queries failed.
 
 > Screenshot: `5-nslookup-broken.PNG`
-> ![](scenario-1/screenshots/5-nslookup-broken.PNG)
+> ![](../scenario-1/screenshots/5-nslookup-broken.PNG)
 
 ---
 
@@ -91,7 +91,7 @@ ipconfig /flushdns
 **Result:** "Successfully flushed the DNS Resolver Cache." — old broken DNS entries were cleared.
 
 > Screenshot: `6-flushdns.PNG`
-> ![](scenario-1/screenshots/6-flushdns.PNG)
+> ![](../scenario-1/screenshots/6-flushdns.PNG)
 
 ---
 
@@ -102,7 +102,7 @@ Ran `ping google.com` and `nslookup google.com` to confirm the fix.
 **Result:** Both succeeded. Google.com resolved correctly, and ping returned replies with 0% packet loss.
 
 > Screenshot: `7-ping-restored.PNG`
-> ![](scenario-1/screenshots/7-ping-restored.PNG)
+> ![](../scenario-1/screenshots/7-ping-restored.PNG)
 
 ---
 
