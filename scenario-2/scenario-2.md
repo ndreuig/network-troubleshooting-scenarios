@@ -25,7 +25,7 @@ Ran `ipconfig /all` to find the machine's IP address and default gateway.
 **Result:** Machine IP was `192.168.1.5`, gateway was `192.168.1.1`. Network adapter was connected and properly configured.
 
 > Screenshot: `1-ipconfig-gateway.PNG`
-> ![](../screenshots/1-ipconfig-gateway.PNG)
+> ![](../scenario-2/screenshots/1-ipconfig-gateway.PNG)
 
 ---
 
@@ -36,7 +36,7 @@ Ran `ping 192.168.1.1` to check if the local network (router) was reachable.
 **Result:** All 4 packets succeeded with very low latency (1–3ms). The local network is working fine.
 
 > Screenshot: `2-ping-gateway-success.PNG`
-> ![](../screenshots/2-ping-gateway-success.PNG)
+> ![](../scenario-2/screenshots/2-ping-gateway-success.PNG)
 
 ---
 
@@ -47,7 +47,7 @@ Ran `ping 192.168.1.200` to try reaching the target device.
 **Result:** "Destination host unreachable" — the device at that IP does not exist or is offline. The reply came from the local machine itself (`192.168.1.5`), meaning the router could not find the target anywhere on the network.
 
 > Screenshot: `3-ping-fake-ip-fail.PNG`
-> ![](../screenshots/3-ping-fake-ip-fail.PNG)
+> ![](../scenario-2/screenshots/3-ping-fake-ip-fail.PNG)
 
 ---
 
@@ -58,7 +58,7 @@ Ran `ping google.com -t` to verify that internet connectivity was not affected.
 **Result:** All 17 packets succeeded with consistent response times (23–27ms, 0% loss). The internet connection is fully functional — the problem is isolated to the specific IP `192.168.1.200`.
 
 > Screenshot: `4-ping-continuous.PNG`
-> ![](../screenshots/4-ping-continuous.PNG)
+> ![](../scenario-2/screenshots/4-ping-continuous.PNG)
 
 ---
 
@@ -75,7 +75,7 @@ Ran `tracert google.com` to trace the full path packets take from the machine to
 **Finding:** The path to the internet is healthy. The issue is only with the specific device at `192.168.1.200`.
 
 > Screenshot: `5-tracert-google.PNG`
-> ![](../screenshots/5-tracert-google.PNG)
+> ![](../scenario-2/screenshots/5-tracert-google.PNG)
 
 ---
 
